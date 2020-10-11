@@ -1,5 +1,20 @@
 LabClass co452Lab = new LabClass(3);
-Student veena = new Student("Veena Patel", "20388712");
-Student gita = new Student("Gita Ralhan", "20844312");
-Student tim = new Student("Tim Lee", "20199812");
-co452Lab.enrollStudent(gita);
+co452Lab.setTime("Tuesday 29/09/2020");
+co452Lab.setRoom("G100");
+co452Lab.setInstructor("Nicholas Day");
+Student fredFlintstone = new Student("Fred Flintstone", "1234");
+Student bartSimpson = new Student("Bart Simpson", "5678");
+Student johnSmith = new Student("John Smith", "9102");
+co452Lab.enrollStudent(fredFlintstone);
+co452Lab.enrollStudent(bartSimpson);
+co452Lab.enrollStudent(johnSmith);
+johnSmith.getCredits()
+    returned int 0
+johnSmith.addCredits(20);
+johnSmith.getCredits()
+    returned int 20
+johnSmith.getName()
+    returned String "John Smith"
+johnSmith.changeName("John Smithh");
+johnSmith.getName()
+    returned String "John Smithh"
