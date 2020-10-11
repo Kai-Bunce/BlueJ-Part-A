@@ -8,13 +8,13 @@
 public class Course
 {
     // instance variables 
-    private int codeNumber;
+    private String codeNumber;
     private String title;
 
     /**
      * Constructor for objects of class Course
      */
-    public Course(String newTitle,int newCodeNumber)
+    public Course(String newTitle,String newCodeNumber)
     {
         // initialise instance variables
         title = newTitle; 
@@ -27,7 +27,7 @@ public class Course
      * 
      * @return   the code number
      */
-    public int getCodeNumber()
+    public String getCodeNumber()
     {
         return codeNumber; 
     }  

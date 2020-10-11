@@ -1,0 +1,6 @@
+johnSmith.print();
+John Smithh, student ID: 9102, credits: 20
+Course computing = new Course("Computing", "G400");
+johnSmith.addCourse(computing);
+johnSmith.print();
+John Smithh, student ID: 9102, credits: 20, course: Computing
