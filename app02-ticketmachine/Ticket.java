@@ -25,5 +25,14 @@ public class Ticket
         this.destination = destination;
         this.price = price;
     }
-
+    // Print to display each ticket
+    /**
+     * 
+     */
+    public void print()
+    {
+        System.out.println("Ticket to " + destination);
+        System.out.println("cost" + price+ "p "); 
+        System.out.println("Issued:" + timeStamp);
+    }
 }
