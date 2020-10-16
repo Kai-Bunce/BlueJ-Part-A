@@ -23,9 +23,9 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int price)
     {
-        price = cost;
+        this.price = price;
         balance = 0;
         total = 0;
     }
