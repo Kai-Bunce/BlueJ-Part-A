@@ -19,8 +19,11 @@ public class Ticket
     /**
      * Constructor for objects of class Ticket
      */
-    public Ticket()
+    public Ticket(String destination, int price)
     {
-    
+        timeStamp = new Date();
+        this.destination = destination;
+        this.price = price;
     }
+
 }
