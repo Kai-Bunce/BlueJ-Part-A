@@ -19,6 +19,10 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+    private Ticket aylesburyTicket;
+    private Ticket amershamTicket;
+    private Ticket highWycombeTicket;
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -28,6 +32,11 @@ public class TicketMachine
         this.price = price;
         balance = 0;
         total = 0;
+        
+        aylesburyTicket = new Ticket("Aylesbury", 220);
+        amershamTicket = new Ticket("Amersham", 300);
+        highWycombeTicket = new Ticket("High Wycombe", 330);
+        
     }
 
     /**
