@@ -1,3 +1,5 @@
+
+
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -9,12 +11,10 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by Kai Bunce
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
-    private int price;
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
@@ -23,13 +23,15 @@ public class TicketMachine
     private Ticket aylesburyTicket;
     private Ticket amershamTicket;
     private Ticket highWycombeTicket;
+    
+    // variable to store the ticket currently being bought
+    private Ticket currentTicket;
 
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int price)
+    public TicketMachine()
     {
-        this.price = price;
         balance = 0;
         total = 0;
         
@@ -37,14 +39,6 @@ public class TicketMachine
         amershamTicket = new Ticket("Amersham", 300);
         highWycombeTicket = new Ticket("High Wycombe", 330);
         
-    }
-
-    /**
-     * @Return The price of a ticket.
-     */
-    public int getPrice()
-    {
-        return price;
     }
 
     /**
@@ -72,6 +66,26 @@ public class TicketMachine
                                amount);
         }
     }
+    
+    public void insert10p()
+    {
+        balance = balance + 10;
+    }
+    
+    public void insert20p()
+    {
+        balance = balance + 20;
+    }
+    
+    public void insert100p()
+    {
+        balance = balance + 100;
+    }
+    
+    public void insert200p()
+    {
+        balance = balance + 200;
+    }
 
     /**
      * Print a ticket if enough money has been inserted, and
@@ -80,6 +94,7 @@ public class TicketMachine
      */
     public void printTicket()
     {
+        int price = 220;
         if(balance >= price) 
         {
             // Simulate the printing of a ticket.
@@ -94,6 +109,15 @@ public class TicketMachine
             total = total + price;
             // Reduce the balance by the price.
             balance = balance - price;
+            
+             // do we need to refund anything
+            if (balance > 0){
+              // do a refund
+              refundBalance();
+            }
+
+            // RESET data for the current ticket
+            currentTicket = null;
         }
         else 
         {
