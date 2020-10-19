@@ -15,14 +15,13 @@
  */
 public class TicketMachine
 {
+    public static final Ticket AYLESBURY = new Ticket("Aylesbury", 220);
+    public static final Ticket AMERSHAM = new Ticket("Amersham", 300);
+    public static final Ticket HIGH_WYCOMBE = new Ticket("High Wycombe", 330);
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    
-    private Ticket aylesburyTicket;
-    private Ticket amershamTicket;
-    private Ticket highWycombeTicket;
     
     // variable to store the ticket currently being bought
     private Ticket currentTicket;
@@ -35,9 +34,7 @@ public class TicketMachine
         balance = 0;
         total = 0;
         
-        aylesburyTicket = new Ticket("Aylesbury", 220);
-        amershamTicket = new Ticket("Amersham", 300);
-        highWycombeTicket = new Ticket("High Wycombe", 330);
+      
         
     }
 
@@ -94,47 +91,61 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        int price = 220;
-        if(balance >= price) 
+        if (currentTicket == null)
         {
-            // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
-            System.out.println("##################");
-            System.out.println();
-
-            // Update the total collected with the price.
-            total = total + price;
-            // Reduce the balance by the price.
-            balance = balance - price;
-            
-             // do we need to refund anything
-            if (balance > 0){
-              // do a refund
-              refundBalance();
-            }
-
-            // RESET data for the current ticket
-            currentTicket = null;
+            System.out.println("You must assign a ticket");
         }
-        else 
+        else
         {
-            System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-                    
+            int price = currentTicket.getPrice();
+            if(balance >= price) 
+            {
+                // Simulate the printing of a ticket.
+                System.out.println("##################");
+                System.out.println("# The BlueJ Line");
+                System.out.println("# Ticket");
+                System.out.println("# " + price + " pence.");
+                System.out.println("##################");
+                System.out.println();
+    
+                // Update the total collected with the price.
+                total = total + price;
+                // Reduce the balance by the price.
+
+                balance = balance - price; 
+
+                
+                 // do we need to refund anything
+                if (balance > 0)
+                {
+                  // do a refund
+                  refundBalance();
+                }
+    
+                // RESET data for the current ticket
+                currentTicket = null;
+            }
+            
+            
+            else 
+            {
+                System.out.println("You must insert at least: " +
+                                   (price - balance) + " more cents.");
+                        
+            }
         }
     }
 
-    /**
+    /*
      * Return the money in the balance.
      * The balance is cleared.
      */
-    public int refundBalance()
-    {
+    private int refundBalance()
+    {   
+
         int amountToRefund;
         amountToRefund = balance;
+        System.out.println("Refunding balance " + amountToRefund);
         balance = 0;
         return amountToRefund;
     }
@@ -149,9 +160,8 @@ public class TicketMachine
     
     public void selectTicket(Ticket ticketToBuy){
       this.currentTicket = ticketToBuy;
-    }public static final Ticket AYLESBURY = new Ticket("Aylesbury", 220);
-public static final Ticket AMERSHAM = new Ticket("Amersham", 300);
-public static final Ticket HIGH_WYCOMBE = new Ticket("High Wycombe", 330);}
+    }
+}
 
  
 
