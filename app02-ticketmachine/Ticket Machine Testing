@@ -1,0 +1,32 @@
+TicketMachine TicketMachine1 = new TicketMachine();
+TicketMachine1.selectTicket(TicketMachine.AYLESBURY);
+TicketMachine1.insert200p();
+TicketMachine1.insert20p();
+TicketMachine1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# 220 pence.
+##################
+
+TicketMachine TicketMachine2 = new TicketMachine();
+TicketMachine2.selectTicket(TicketMachine.AMERSHAM);
+TicketMachine2.insert200p();
+TicketMachine2.insert200p();
+TicketMachine2.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# 300 pence.
+##################
+
+Refunding balance 100
+TicketMachine TicketMachine3 = new TicketMachine();
+TicketMachine3.selectTicket(TicketMachine.HIGH_WYCOMBE);
+TicketMachine3.insert200p();
+TicketMachine3.printTicket();
+You must insert at least: 130 more cents.
+TicketMachine TicketMachine4 = new TicketMachine();
+TicketMachine4.insert200p();
+TicketMachine4.printTicket();
+You must assign a ticket
