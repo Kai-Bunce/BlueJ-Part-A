@@ -138,7 +138,20 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
-   
-  
+    
+     public void printAllTickets(){
+      System.out.println("Here are the available tickets");
+
+      AYLESBURY.print();         
+      AMERSHAM.print();       
+      HIGH_WYCOMBE.print();      
+    }
+    
+    public void selectTicket(Ticket ticketToBuy){
+      this.currentTicket = ticketToBuy;
+    }public static final Ticket AYLESBURY = new Ticket("Aylesbury", 220);
+public static final Ticket AMERSHAM = new Ticket("Amersham", 300);
+public static final Ticket HIGH_WYCOMBE = new Ticket("High Wycombe", 330);}
+
  
 
