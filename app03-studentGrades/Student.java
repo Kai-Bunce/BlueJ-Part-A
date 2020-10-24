@@ -15,6 +15,8 @@ public class Student
     private int id;
     // the amount of credits for study taken so far
     private int credits;
+    // the students course
+    private Course course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -64,6 +66,14 @@ public class Student
     public int getCredits()
     {
         return credits;
+    }
+    
+    /**
+     * Return the course.
+     */
+    public Course getCourse()
+    {
+        return course;   
     }
     
     /**
