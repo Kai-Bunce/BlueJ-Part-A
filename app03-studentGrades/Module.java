@@ -43,4 +43,29 @@ public class Module
     {
          return mark;   
     }
+    
+      public char calculateGrade()
+    {
+	   
+	   char grade;
+	   
+	   if (mark >= 70) {
+		   grade = 'A';
+	   }
+	   else if (mark >=69) {
+		   grade = 'B';  
+	   }
+	   else if (mark >=59) {
+		   grade = 'C';
+	   }
+	   else if (mark >=49) {
+		   grade = 'D';
+	   }
+	   else {
+		   grade = 'F';
+	   }
+	   
+	   System.out.println("the grade is" + grade);
+	   return grade;
+   }
 }

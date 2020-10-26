@@ -76,6 +76,11 @@ public class Student
         return course;   
     }
     
+     public void addCourse (Course newCourse)
+    {
+        course = newCourse;
+    }
+    
     /**
      * Print the student's name and ID number to the output terminal.
      */

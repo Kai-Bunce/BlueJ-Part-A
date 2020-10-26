@@ -26,6 +26,10 @@ public class Course
         this.title = title;
     }
 
+     public void addModule (Module newModule)
+    {
+        module1 = newModule;
+    }
     
     public void addModule(Module module, int moduleNo)
     {
@@ -52,9 +56,5 @@ public class Course
         
        
     }  
-    public char calculateGrade()
-    {
-        
-    }
-
+  
 }
