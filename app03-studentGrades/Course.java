@@ -1,6 +1,6 @@
 
 /**
- * Define a course      
+ * Shows course information   
  *
  * @author Kai Bunce
  * @version 1.0

@@ -1,0 +1,36 @@
+Student Luke = new Student("Luke", 1234);
+Course Computing = new Course("Computing", "Computing");
+Luke.addCourse(Computing);
+Module Excel = new Module("Excel", "4321");
+Module Coding = new Module("Coding", "5678");
+Course Powerpoint = new Course("Powerpoint", "Powerpoint");
+Module HTML = new Module("HTML", "HTML");
+Computing.addModule(Excel);
+Computing.addModule(Coding);
+Module Powerpoint = new Module("Powerpoint", "7890");
+Computing.addModule(HTML);
+Computing.addModule(Powerpoint);
+Luke.addCredits(60);
+Excel.awardMark(70);
+Coding.awardMark(62);
+HTML.awardMark(46);
+Powerpoint.awardMark(70);
+Excel.getMark()
+    returned int 70
+Coding.getMark()
+    returned int 62
+HTML.getMark()
+    returned int 46
+Powerpoint.getMark()
+    returned int 70
+Excel.calculateGrade()
+the grade isA
+    returned char 'A'
+HTML.calculateGrade()
+the grade isF
+    returned char 'F'
+Powerpoint.getMark()
+    returned int 70
+Powerpoint.calculateGrade()
+the grade isA
+    returned char 'A'

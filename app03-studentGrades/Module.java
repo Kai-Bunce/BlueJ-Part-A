@@ -33,11 +33,11 @@ public class Module
            System.out.print("invalid mark");
         }
     }
-    public void print()
-    {
+  public void print()
+   {
         System.out.println("Module: " + codeNo +
             "" + title + " Mark = " + mark);
-    }
+   }
     
     public int getMark()
     {
