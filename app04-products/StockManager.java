@@ -40,7 +40,7 @@ public class StockManager
         Product product = findProduct(id);
         if(product != null)
         {
-            product.increaseQuantity(amount);
+            product.deliver(amount);
             System.out.println("Product Delivered : " + product);  
         }
         else
@@ -60,7 +60,7 @@ public class StockManager
         
         if(product != null) 
         {
-            printDetails(id);
+            print deliverProduct(id);
             product.sellOne();
             printDetails(id);
         }
@@ -71,14 +71,24 @@ public class StockManager
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
      */
-    public void printDetails(int id)
+    public void deliverProduct (int id,int amount)
     {
         Product product = findProduct(id);
         
         if(product != null) 
-        {
-            System.out.println(product.toString());
-        }
+        
+            product.deliver(amount);
+        else
+            System.out.println("Invalid Product ID = " + id);
+    }
+    
+    /**
+     * 
+     */
+    public void deliverProduct(int id, int amount)
+    {
+        Product product = findProduct(id);
+        product.deliver(amount);
     }
     
     /**

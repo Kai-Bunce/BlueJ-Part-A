@@ -64,7 +64,7 @@ public class Product
      * @param amount The number of new items added to the stock.
      *               This must be greater than zero.
      */
-    public void increaseQuantity(int amount)
+    public void deliver(int amount)
     {
         if(amount > 0) 
         {
