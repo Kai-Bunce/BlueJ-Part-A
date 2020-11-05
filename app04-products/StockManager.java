@@ -54,15 +54,18 @@ public class StockManager
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int id, int quantity)
     {
         Product product = findProduct(id);
         
         if(product != null) 
         {
-            print deliverProduct(id);
-            product.sellOne();
-            printDetails(id);
+            printProduct(id);
+            for(int count = 0; count <= quantity; count++)
+            {
+               product.sellOne(); 
+            }
+            printProduct(id);
         }
     }
     
@@ -80,15 +83,6 @@ public class StockManager
             product.deliver(amount);
         else
             System.out.println("Invalid Product ID = " + id);
-    }
-    
-    /**
-     * 
-     */
-    public void deliverProduct(int id, int amount)
-    {
-        Product product = findProduct(id);
-        product.deliver(amount);
     }
     
     /**
