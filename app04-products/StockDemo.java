@@ -56,16 +56,27 @@ public class StockDemo
      */
     public void demoDeliverProducts()
     {
-       int quantity = 0;
+        int quantity = 0;
         
-        for(int id = 101; id <= 110; id++)
+         for(int id = 101; id <= 110; id++)
        {
            quantity = randomGenerator.nextInt(8);
            manager.sellProduct(id, quantity);
        }
        
     }
-
+    
+       private void demoSellProducts()
+    {
+        int quantity = 0;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            quantity = randomGenerator.nextInt(4);
+            manager.sellProduct(id, quantity);
+        }
+    }
+    
     /**
      * @return The stock manager.
      */

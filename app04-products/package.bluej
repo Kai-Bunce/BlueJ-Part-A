@@ -1,11 +1,11 @@
 #BlueJ package file
-dependency1.from=StockManager
-dependency1.to=Product
+dependency1.from=StockDemo
+dependency1.to=StockManager
 dependency1.type=UsesDependency
 dependency2.from=StockDemo
-dependency2.to=StockManager
+dependency2.to=Product
 dependency2.type=UsesDependency
-dependency3.from=StockDemo
+dependency3.from=StockManager
 dependency3.to=Product
 dependency3.type=UsesDependency
 editor.fx.0.height=838
@@ -38,7 +38,7 @@ target1.naviview.expanded=true
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=120
-target1.x=410
+target1.x=400
 target1.y=170
 target2.height=60
 target2.name=Product

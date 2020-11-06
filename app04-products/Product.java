@@ -41,7 +41,15 @@ public class Product
     {
         return name;
     }
-
+    
+    /**
+     * Set a new name for this student.
+     */
+    public void changeName(String replacementName)
+    {
+        name = replacementName;
+    }
+    
     /**
      * @return The quantity in stock.
      */

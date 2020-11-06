@@ -60,6 +60,8 @@ public class StockManager
         
         if(product != null) 
         {
+            if(quantity > product.getQuantity())
+               quantity = product.getQuantity();
             printProduct(id);
             for(int count = 0; count <= quantity; count++)
             {
@@ -67,22 +69,6 @@ public class StockManager
             }
             printProduct(id);
         }
-    }
-    
-        /**
-     * Show details of the given product. If found,
-     * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
-     */
-    public void deliverProduct (int id,int amount)
-    {
-        Product product = findProduct(id);
-        
-        if(product != null) 
-        
-            product.deliver(amount);
-        else
-            System.out.println("Invalid Product ID = " + id);
     }
     
     /**
@@ -116,10 +102,30 @@ public class StockManager
     }
 
     /**
+     * Print details on the given product
+     * If found the name and stock level will be displayed
+     * @param id The ID of the product to look for
+     */
+    public void printProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            System.out.println(product.toString());
+        }
+    }
+    
+    /**
      * Print details of all the products.
      */
     public void printAllProducts()
     {
+        System.out.println();
+        System.out.println("Kai's Phones");
+        System.out.println("=============");
+        System.out.println();
+        
         for(Product product :stock)
         {
             System.out.println(product);  
