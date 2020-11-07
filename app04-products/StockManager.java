@@ -5,12 +5,13 @@ import java.util.ArrayList;
  * The stock is described by zero or more Products.
  * 
  * @author Kai Bunce 
- * @version (a version number or a date)
+ * @version 1.0
  */
 public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    private String newProductName;
 
     /**
      * Initialise the stock manager.
@@ -22,19 +23,14 @@ public class StockManager
 
     /**
      * Add a product to the list.
-     * @param item The item to be added.
      */
     public void addProduct(Product item)
     {
         stock.add(item);
     }
     
-    
     /**
-     * Receive a delivery of a particular product.
-     * Increase the quantity of the product by the given amount.
-     * @param id The ID of the product.
-     * @param amount The amount to increase the quantity by.
+     * Increases the quantity by delivering a product
      */
     public void delivery(int id, int amount)
     {
@@ -51,9 +47,7 @@ public class StockManager
     }
     
      /**
-     * Sell one of the given item.
-     * Show the before and after status of the product.
-     * @param id The ID of the product being sold.
+     * Sells a product
      */
     public void sellProduct(int id, int quantity)
     {
@@ -74,8 +68,6 @@ public class StockManager
     
     /**
      * Try to find a product in the stock with the given id.
-     * @return The identified product, or null if there is none
-     *         with a matching ID.
      */
     public Product findProduct(int id)
     {
@@ -91,11 +83,7 @@ public class StockManager
     }
     
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     *Shows the stock the ID has
      */
     public int numberInStock(int id)
     {
@@ -132,6 +120,42 @@ public class StockManager
         }
         return result;
     }
+        
+    /**
+     * Renaming a product using its ID
+     */
+    public void renameProduct(int id,String newName)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+            String previousname = product.getName();
+            product.renameProduct(newName);
+            
+            if(previousName != product.getName())
+            {
+                System.out.println("The product has been renamed "+ previousname
+                + "to " + product.getName());
+            }
+        }
+    }
+    
+    /**
+     * A product can be deleted by ID
+     */
+    public void deleteProduct(int id)
+    {
+        Product product = findProduct(id);
+        {
+            if(product != null)
+            {
+                this.stock.remove(product);
+                System.out.print("The product is no longer sold " + product);
+            }
+        }
+    }
+    
+    
     
     /**
      * Print details of all the products.
