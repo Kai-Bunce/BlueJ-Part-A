@@ -29,6 +29,7 @@ public class StockManager
         stock.add(item);
     }
     
+    
     /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -49,7 +50,7 @@ public class StockManager
         }
     }
     
-      /**
+     /**
      * Sell one of the given item.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
@@ -114,6 +115,22 @@ public class StockManager
         {
             System.out.println(product.toString());
         }
+    }
+    
+    /**
+     * Print products with stock less than or equal to 2
+     */
+    public ArrayList<Product> getLowStock()
+    {
+        ArrayList<Product> result = new ArrayList<Product>();
+        for (Product product : stock)
+        {
+            if(product.getQuantity() <=2)
+            {
+                System.out.println("These products stocks are low " + product);
+            }
+        }
+        return result;
     }
     
     /**

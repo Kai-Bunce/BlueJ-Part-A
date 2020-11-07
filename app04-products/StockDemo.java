@@ -1,3 +1,4 @@
+
 import java.util.Random;
 
 /**
@@ -76,7 +77,7 @@ public class StockDemo
             manager.sellProduct(id, quantity);
         }
     }
-    
+
     /**
      * @return The stock manager.
      */
