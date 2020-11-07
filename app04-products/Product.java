@@ -15,9 +15,6 @@ public class Product
 
     /**
      * Constructor for objects of class Product.
-     * The initial stock quantity is zero.
-     * @param id The product's identifying number.
-     * @param name The product's name.
      */
     public Product(int id, String name)
     {
@@ -40,14 +37,6 @@ public class Product
     public String getName()
     {
         return name;
-    }
-    
-    /**
-     * Set a new name for this student.
-     */
-    public void changeName(String replacementName)
-    {
-        name = replacementName;
     }
     
     /**
@@ -100,5 +89,10 @@ public class Product
             System.out.println(
                 "Attempt to sell an out of stock item: " + name);
         }
+    }
+    
+    public void rename(String newName)
+    {
+        this.name = newName;
     }
 }

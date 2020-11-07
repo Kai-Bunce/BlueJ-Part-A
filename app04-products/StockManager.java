@@ -3,7 +3,6 @@ import java.util.ArrayList;
 /**
  * Manage the stock of phones in a business.
  * The stock is described by zero or more Products.
- * 
  * @author Kai Bunce 
  * @version 1.0
  */
@@ -130,9 +129,9 @@ public class StockManager
         if (product != null)
         {
             String previousname = product.getName();
-            product.renameProduct(newName);
+            product.rename(newName);
             
-            if(previousName != product.getName())
+            if(!previousName.equals(product.getName())
             {
                 System.out.println("The product has been renamed "+ previousname
                 + "to " + product.getName());
