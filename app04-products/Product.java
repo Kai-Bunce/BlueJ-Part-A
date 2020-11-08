@@ -20,7 +20,6 @@ public class Product
     {
         this.id = id;
         this.name = name;
-        quantity = 0;
     }
 
     /**
@@ -74,6 +73,19 @@ public class Product
         }
     }
 
+     public void sell(int amount)
+    {
+        if(amount < quantity) 
+        {
+            quantity -= amount;
+        }
+        else 
+        {
+            System.out.println("Do not have enough items to sell,current quantity " + quantity +
+                               " trying to buy: " + amount);
+        }
+    }
+    
     /**
      * Sell one of these products.
      * An error is reported if there appears to be no stock.

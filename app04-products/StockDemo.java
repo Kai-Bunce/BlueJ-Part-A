@@ -13,7 +13,7 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
-    
+    // Random number for the quantity of the product
     private Random randomGenerator;
 
     /**
@@ -78,11 +78,4 @@ public class StockDemo
         }
     }
 
-    /**
-     * @return The stock manager.
-     */
-    public StockManager getManager()
-    {
-        return manager;
-    }
 }

@@ -55,13 +55,20 @@ public class StockManager
         if(product != null) 
         {
             if(quantity > product.getQuantity())
-               quantity = product.getQuantity();
-            printProduct(id);
-            for(int count = 0; count <= quantity; count++)
             {
-               product.sellOne(); 
+                quantity = product.getQuantity();
+                printProduct(id);
+                //for(int count = 0; count <= quantity; count++)
+                //{
+                // product.sellOne(); 
+                //}
+                product.sell (quantity);
+                printProduct(id);
             }
-            printProduct(id);
+            else 
+            {
+                System.out.println(" There is not enough stock to sell ");
+            }
         }
     }
     
@@ -84,10 +91,10 @@ public class StockManager
     /**
      *Shows the stock the ID has
      */
-    public int numberInStock(int id)
-    {
-        return 0;
-    }
+    //public int numberInStock(int id)
+    //{
+    //  return 0;
+    //}
 
     /**
      * Print details on the given product
@@ -114,12 +121,27 @@ public class StockManager
         {
             if(product.getQuantity() <=2)
             {
-                System.out.println("These products stocks are low " + product);
+                System.out.println("These products stocks are low " + product.toString() );
+                result.add(product);
             }
         }
         return result;
     }
         
+    public ArrayList<Product> getMatchingName(String searchTerm)
+    {
+        ArrayList<Product> result = new ArrayList<Product>();
+        for (Product product : stock)
+        {
+            if(product.getName().contains(searchTerm))
+            {
+                System.out.println("This product contains the search term " + product.toString() );
+                result.add(product);
+            }
+        }
+        return result;
+    }
+    
     /**
      * Renaming a product using its ID
      */
@@ -128,12 +150,12 @@ public class StockManager
         Product product = findProduct(id);
         if (product != null)
         {
-            String previousname = product.getName();
+            String previousName = product.getName();
             product.rename(newName);
             
-            if(!previousName.equals(product.getName())
+            if(!previousName.equals(product.getName()))
             {
-                System.out.println("The product has been renamed "+ previousname
+                System.out.println("The product has been renamed "+ previousName
                 + "to " + product.getName());
             }
         }
@@ -145,17 +167,14 @@ public class StockManager
     public void deleteProduct(int id)
     {
         Product product = findProduct(id);
+        
+        if(product != null)
         {
-            if(product != null)
-            {
-                this.stock.remove(product);
-                System.out.print("The product is no longer sold " + product);
-            }
+            this.stock.remove(product);
+            System.out.print("The product is no longer sold " + product);
         }
     }
-    
-    
-    
+      
     /**
      * Print details of all the products.
      */
@@ -168,7 +187,7 @@ public class StockManager
         
         for(Product product :stock)
         {
-            System.out.println(product);  
+            System.out.println(product.toString());  
         }
     }
 }
