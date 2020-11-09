@@ -1,0 +1,199 @@
+
+Products AFTER adding Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+101: Samsung Galaxy S20 stock level: 0
+*** TESTING REMOVING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: Samsung Galaxy S20 stock level: 0
+The product is no longer sold 101: Samsung Galaxy S20 stock level: 0Products AFTER removing Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+*** TESTING RENAMING PRODUCT ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+Products AFTER adding Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+101: Samsung Galaxy S20 stock level: 0
+The product has been renamed Samsung Galaxy S20to New Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 0
+*** TESTING LOW STOCK ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 0
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 0
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: Google Pixel 5 stock level: 0
+105: Apple iPhone 11 stock level: 0
+106: Apple iPhone 10 stock level: 0
+107: Moto G9 Play stock level: 0
+Product Delivered : 101: New Samsung Galaxy S20 stock level: 4
+Product Delivered : 102: Apple iPhone 12 stock level: 2
+Product Delivered : 103: Google Pixel 4A stock level: 1
+Product Delivered : 104: Google Pixel 5 stock level: 1
+Product Delivered : 105: Apple iPhone 11 stock level: 2
+Product Delivered : 106: Apple iPhone 10 stock level: 5
+Product Delivered : 107: Moto G9 Play stock level: 3
+These products stocks are low 102: Apple iPhone 12 stock level: 2
+These products stocks are low 103: Google Pixel 4A stock level: 1
+These products stocks are low 104: Google Pixel 5 stock level: 1
+These products stocks are low 105: Apple iPhone 11 stock level: 2
+*** TESTING FINDING PRODUCTS ID ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+Found Product : 101: New Samsung Galaxy S20 stock level: 4
+*** TESTING FINDING PRODUCTS NAME ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+Found Product : 101: New Samsung Galaxy S20 stock level: 4
+*** TESTING DELIVERING A PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+Product Delivered : 101: New Samsung Galaxy S20 stock level: 8
+101: New Samsung Galaxy S20 stock level: 8
+*** TESTING SELLING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 8
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+ There is not enough stock to sell 
+101: New Samsung Galaxy S20 stock level: 8
+*** TESTING ADDING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 8
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+Products AFTER adding Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 8
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+101: New Samsung Galaxy S20 stock level: 8
+Product is already added
+*** TESTING SELLING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 8
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+101: New Samsung Galaxy S20 stock level: 8
+101: New Samsung Galaxy S20 stock level: 8
+101: New Samsung Galaxy S20 stock level: 8
+Do not have enough items to sell,current quantity 8 trying to buy: 8
+101: New Samsung Galaxy S20 stock level: 8
+101: New Samsung Galaxy S20 stock level: 8
+*** TESTING REMOVING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 8
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+101: New Samsung Galaxy S20 stock level: 8
+101: New Samsung Galaxy S20 stock level: 8
+Product does not exist
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 8
+102: Apple iPhone 12 stock level: 2
+103: Google Pixel 4A stock level: 1
+104: Google Pixel 5 stock level: 1
+105: Apple iPhone 11 stock level: 2
+106: Apple iPhone 10 stock level: 5
+107: Moto G9 Play stock level: 3
+101: New Samsung Galaxy S20 stock level: 8
+101: New Samsung Galaxy S20 stock level: 8

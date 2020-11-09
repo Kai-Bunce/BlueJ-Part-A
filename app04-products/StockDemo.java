@@ -44,12 +44,16 @@ public class StockDemo
     public void runDemo()
     {
        demoAddProduct();  // test we can add items to the list (test printing all the list)
-       demoRemoveProduct();
-       demoRenameProduct();
-       demoFindId();
-       demoGetMatchingName();
-       demoDeliver();
-       demoSellProducts();
+       demoRemoveProduct(); // this will delete the product in the list, the list now has 0 items
+       demoRenameProduct(); // this will add a product to the list and rename it,  the list now has 1 items
+       demoLowStock(); // this test finds a product which is low on stock
+       demoFindId(); // this test does not add any products to the list, the "findProduct" method will search through all the list of products
+       demoGetMatchingName(); // this test does not add any products to the list, the "getMatchingName" method will search through all the list of products
+       demoDeliver();  // this test does not add any products to the list, its using the product added in the rename test 
+       demoSellProducts(); // this test does not add any products to the list, its using the product added in the rename test 
+       demoAddProductWhenTheresAlreadyOne(); // this test attempts to add a product which is already listed
+       demoSellProductsWhensStocksTooLow(); // this test is to sell a product when there isn't enough stock
+       demoRemoveProductWhichDoesNotExist(); // this test is to remove a product that doesn't exist
     }
       
      private void demoAddProduct()  
@@ -84,20 +88,44 @@ public class StockDemo
       manager.printAllProducts();
     }
    
+    private void demoLowStock()
+    {
+      System.out.println("*** TESTING LOW STOCK ***");
+      System.out.println("Products BEFORE");
+      manager.printAllProducts();  // should show 1 product
+      manager.addProduct(P2); 
+      manager.addProduct(P3);
+      manager.addProduct(P4);  
+      manager.addProduct(P5);  
+      manager.addProduct(P6);  
+      manager.addProduct(P7);  
+      manager.printAllProducts();  // should show 7 products
+      manager.delivery(P1.getID(),4);
+      manager.delivery(P2.getID(),2);
+      manager.delivery(P3.getID(),1);
+      manager.delivery(P4.getID(),1);
+      manager.delivery(P5.getID(),2);
+      manager.delivery(P6.getID(),5);
+      manager.delivery(P7.getID(),3);
+      manager.getLowStock();
+    }
+    
     private void demoFindId()  
     {
       System.out.println("*** TESTING FINDING PRODUCTS ID ***");
       System.out.println("Products BEFORE");
       manager.printAllProducts();  // should show 1 product
-      manager.findProduct(P1.getID());
+      Product foundProduct = manager.findProduct(P1.getID());
+      System.out.println("Found Product : " + P1.toString());  
     }
     
     private void demoGetMatchingName()  
     {
-      System.out.println("*** TESTING GETTING NAME PRODUCTS ***");
+      System.out.println("*** TESTING FINDING PRODUCTS NAME ***");
       System.out.println("Products BEFORE");
-      manager.printAllProducts(); // should show 1 product
-      manager.getMatchingName("New Samsung Galaxy S20");
+      manager.printAllProducts();  // should show 1 product
+      Product foundProduct = manager.findProduct(P1.getID());
+      System.out.println("Found Product : " + P1.toString());  
     }
     
     private void demoDeliver()  
@@ -106,6 +134,7 @@ public class StockDemo
       System.out.println("Products BEFORE");
       manager.printAllProducts();  // should show 1 product
       manager.delivery(P1.getID(),4);
+      System.out.println(P1.toString());  
     }
     
     private void demoSellProducts()  
@@ -114,34 +143,37 @@ public class StockDemo
       System.out.println("Products BEFORE");
       manager.printAllProducts();  // should show 1 product
       manager.sellProduct(P1.getID(),1);
+      System.out.println(P1.toString());  
     }
     
-    /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
-     */
-    
-    private void demoDeliverProducts()
+         private void demoAddProductWhenTheresAlreadyOne()  
     {
-        int quantity = 0;
-       
-         for(int id = 101; id <= 110; id++)
-       {
-           quantity = randomGenerator.nextInt(8);
-           manager.sellProduct(id, quantity);
-       }
-       
+      System.out.println("*** TESTING ADDING PRODUCTS ***");
+      System.out.println("Products BEFORE");
+      manager.printAllProducts();  // should show 0 product
+      manager.addProduct(P1);
+      System.out.println("Products AFTER adding Samsung Galaxy S20");
+      manager.printAllProducts();  // should show 1 product
+      manager.addProduct(P1);
+      System.out.println("Product is already added");
     }
-   
-       private void demoSellProducts2()
+    
+        private void demoSellProductsWhensStocksTooLow()  
     {
-        int quantity = 0;
-       
-        for(int id = 101; id <= 110; id++)
-        {
-            quantity = randomGenerator.nextInt(4);
-            manager.sellProduct(id, quantity);
-        }
+      System.out.println("*** TESTING SELLING PRODUCTS ***");
+      System.out.println("Products BEFORE");
+      manager.printAllProducts();  // should show 1 product
+      manager.sellProduct(P1.getID(),10);
+      System.out.println(P1.toString());  
+    }
+    
+        private void demoRemoveProductWhichDoesNotExist()  
+    {
+      System.out.println("*** TESTING REMOVING PRODUCTS ***");
+      System.out.println("Products BEFORE");
+      manager.printAllProducts(); // should show all products
+      manager.deleteProduct(P10.getID()); // should remove 1 product that does not exist
+      System.out.println("Product does not exist");
+      manager.printAllProducts(); //Should show 0 products
     }
 }
