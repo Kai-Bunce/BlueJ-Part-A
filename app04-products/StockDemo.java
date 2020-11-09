@@ -35,7 +35,6 @@ public class StockDemo
     {
         this.manager = manager;
         randomGenerator = new Random();
-   
     }
    
     /**
@@ -44,15 +43,13 @@ public class StockDemo
      */
     public void runDemo()
     {
-        demoAddProduct();  // test we can add items to the list (test printing all the list)
-       
-        /*
-        manager.printAllProducts();
-        demoDeliverProducts();
-        manager.printAllProducts();
-        demoSellProducts();
-        manager.printAllProducts();
-        */
+       demoAddProduct();  // test we can add items to the list (test printing all the list)
+       demoRemoveProduct();
+       demoRenameProduct();
+       demoFindId();
+       demoGetMatchingName();
+       demoDeliver();
+       demoSellProducts();
     }
       
      private void demoAddProduct()  
@@ -64,147 +61,59 @@ public class StockDemo
       System.out.println("Products AFTER adding Samsung Galaxy S20");
       manager.printAllProducts();  // should show 1 product
     }
- 
-      public void runDemoRemove()
-    {
-        demoRemoveProduct(); //test so we can remove items from the list
-        /*
-         * manager.printAllProducts();
-         * demoDeliverProducts();
-         * manager.printAllProducts();
-         * demoRemoveProducts();
-         * manager.printAllProducts();
-         * */
-    }
      
-         private void demoRemoveProduct()  
+    private void demoRemoveProduct()  
     {
-      System.out.println("*** TESTING ADDING PRODUCTS ***");
+      System.out.println("*** TESTING REMOVING PRODUCTS ***");
       System.out.println("Products BEFORE");
-      manager.printAllProducts();  // should show 0 product
-      manager.addProduct(P1);
-      System.out.println("Products AFTER adding Samsung Galaxy S20");
-      manager.printAllProducts();  // should show 1 product
-      manager.deleteProduct(101); // should remove 1 product
+      manager.printAllProducts(); // should show 1 product
+      manager.deleteProduct(P1.getID()); // should remove 1 product
       System.out.println("Products AFTER removing Samsung Galaxy S20");
+      manager.printAllProducts(); //Should show 0 products
     }
     
-          public void runDemoRename()
+    private void demoRenameProduct()  
     {
-        demoRename(); //test so we can rename items from the list
-        /*
-         * manager.printAllProducts();
-         * demoDeliverProducts();
-         * manager.printAllProducts();
-         * demoRenameProduct();
-         **/
-    }
-    
-             private void demoRenameProduct()  
-    {
-      System.out.println("*** TESTING ADDING PRODUCTS ***");
+      System.out.println("*** TESTING RENAMING PRODUCT ***");
       System.out.println("Products BEFORE");
       manager.printAllProducts();  // should show 0 product
-      manager.addProduct(P3);
+      manager.addProduct(P1);
       System.out.println("Products AFTER adding Samsung Galaxy S20");
       manager.printAllProducts();  // should show 1 product
-      manager.renameProduct(103); // should rename the product
+      manager.renameProduct(P1.getID(),"New Samsung Galaxy S20"); // should rename the product
       manager.printAllProducts();
     }
-    
-              public void runDemoFindId()
+   
+    private void demoFindId()  
     {
-        demoFindId(); //test so we can find an item using its ID from the list
-        /*
-         * manager.printAllProducts();
-         * demoDeliverProducts();
-         * manager.printAllProducts();
-         * demoFindProduct();
-         **/
-    }
-    
-         private void demoFindId()  
-    {
-      System.out.println("*** TESTING ADDING PRODUCTS ***");
+      System.out.println("*** TESTING FINDING PRODUCTS ID ***");
       System.out.println("Products BEFORE");
-      manager.printAllProducts();  // should show 0 product
-      manager.addProduct(P1);
-      System.out.println("Products AFTER adding Samsung Galaxy S20");
       manager.printAllProducts();  // should show 1 product
-      manager.findProduct();
-      
+      manager.findProduct(P1.getID());
     }
     
-       public void runDemoSearchTerm()
+    private void demoGetMatchingName()  
     {
-        demoGetMatchingName(); // test we can find an item in the list by a string in its name
-        /*
-         * manager.printAllProducts();
-         * demoDeliverProducts();
-         * manager.printAllProducts();
-         * demoGetMatchingName();
-
-         * */
-    }
-    
-             private void demoGetMatchingName()  
-    {
-      System.out.println("*** TESTING ADDING PRODUCTS ***");
+      System.out.println("*** TESTING GETTING NAME PRODUCTS ***");
       System.out.println("Products BEFORE");
-      manager.printAllProducts();  // should show 0 product
-      manager.addProduct(P1);
-      System.out.println("Products AFTER adding Samsung Galaxy S20");
+      manager.printAllProducts(); // should show 1 product
+      manager.getMatchingName("New Samsung Galaxy S20");
+    }
+    
+    private void demoDeliver()  
+    {
+      System.out.println("*** TESTING DELIVERING A PRODUCTS ***");
+      System.out.println("Products BEFORE");
       manager.printAllProducts();  // should show 1 product
-      manager.getMatchingName();
+      manager.delivery(P1.getID(),4);
     }
     
-           public void runDemoAddQuantity()
+    private void demoSellProducts()  
     {
-        demoDeliverProducts(); // test we can deliver item in the list by a string in its name
-        /*
-         * manager.printAllProducts();
-         * demoDeliverProducts();
-         * manager.printAllProducts();
-         * demoDeliverProducts();
-         * manager.printAllProducts();
-
-         * */
-    }
-    
-         private void demoDeliver()  
-    {
-      System.out.println("*** TESTING ADDING PRODUCTS ***");
+      System.out.println("*** TESTING SELLING PRODUCTS ***");
       System.out.println("Products BEFORE");
-      manager.printAllProducts();  // should show 0 product
-      manager.addProduct(P1);
-      System.out.println("Products AFTER adding Samsung Galaxy S20");
-      manager.printAllProducts();  // should show 1 product3
-      manager.addProduct(P1);
-      manager.printAllProducts();
-    }
-    
-         private void demoSell()  
-    {
-      demoSellProducts(); // test we can sell item in the list by a string in its name
-        /*
-         * manager.printAllProducts();
-         * demoDeliverProducts();
-         * manager.printAllProducts();
-         * demoSellProducts();
-         * manager.printAllProducts();
-
-         * */
-    }
-    
-         private void demoSellProducts()  
-    {
-      System.out.println("*** TESTING ADDING PRODUCTS ***");
-      System.out.println("Products BEFORE");
-      manager.printAllProducts();  // should show 0 product
-      manager.addProduct(P1);
-      System.out.println("Products AFTER adding Samsung Galaxy S20");
       manager.printAllProducts();  // should show 1 product
-      manager.sellProduct();
+      manager.sellProduct(P1.getID(),1);
     }
     
     /**
@@ -213,7 +122,7 @@ public class StockDemo
      * product is restocked, and then the details are shown again.
      */
     
-    public void demoDeliverProducts()
+    private void demoDeliverProducts()
     {
         int quantity = 0;
        
@@ -225,7 +134,7 @@ public class StockDemo
        
     }
    
-       private void demoSellProducts()
+       private void demoSellProducts2()
     {
         int quantity = 0;
        

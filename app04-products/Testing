@@ -1,0 +1,85 @@
+stockDem1.runDemo();
+*** TESTING ADDING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+Products AFTER adding Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+101: New Samsung Galaxy S20 stock level: 4
+*** TESTING REMOVING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+101: New Samsung Galaxy S20 stock level: 4
+The product is no longer sold 101: New Samsung Galaxy S20 stock level: 4Products AFTER removing Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+*** TESTING RENAMING PRODUCT ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+Products AFTER adding Samsung Galaxy S20
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+101: New Samsung Galaxy S20 stock level: 4
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+101: New Samsung Galaxy S20 stock level: 4
+*** TESTING FINDING PRODUCTS ID ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+101: New Samsung Galaxy S20 stock level: 4
+*** TESTING GETTING NAME PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+101: New Samsung Galaxy S20 stock level: 4
+This product contains the search term 101: New Samsung Galaxy S20 stock level: 4
+This product contains the search term 101: New Samsung Galaxy S20 stock level: 4
+*** TESTING DELIVERING A PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 4
+101: New Samsung Galaxy S20 stock level: 4
+Product Delivered : 101: New Samsung Galaxy S20 stock level: 8
+*** TESTING SELLING PRODUCTS ***
+Products BEFORE
+
+Kai's Phones
+=============
+
+101: New Samsung Galaxy S20 stock level: 8
+101: New Samsung Galaxy S20 stock level: 8
+ There is not enough stock to sell 
