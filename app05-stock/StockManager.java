@@ -88,14 +88,18 @@ public class StockManager
         return null;
     }
     
-    /**
-     *Shows the stock the ID has
-     */
-    //public int numberInStock(int id)
-    //{
-    //  return 0;
-    //}
-
+    public boolean isDuplicateID(int id)
+    {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     /**
      * Print details on the given product
      * If found the name and stock level will be displayed
