@@ -49,7 +49,7 @@ public class StockApp
             if(choice.equals("quit"))
                 finished = true;
         }
-    }
+   }
     
     /**
      * 
@@ -60,23 +60,55 @@ public class StockApp
         {
             addProduct();
         }
-        else if (choice.equals("remove"))
+         if (choice.equals("remove"))
         {
             removeProduct();
         }
-        else if(choice.equals("printAll"))
+        {
+         if (choice.equals("sell"))
+            sellProduct();
+        }    
+        {
+         if (choice.equals("search"))
+            searchProduct();
+        }
+        {
+            if (choice.equals("restock"))
+            restock();
+        }   
+        {
+            if (choice.equals("lowstock"))
+            lowStock();
+        }
+        if(choice.equals("printAll"))
         {
             printAllProducts();
         }
    }
    
    public void addProduct()
-    {
+   {
         System.out.println("Add a new Product");
         System.out.println();
         
         System.out.println("Please enter the name of the product ");
         String name = input.getInput();
+        
+        boolean isDuplicate = manager.isDuplicateID(nextID);
+        
+        if(isDuplicate)
+        {
+            boolean finished = false;
+            
+            while(!finished)
+            {
+                nextID++;
+                if(!manager.isDuplicateID(nextID))
+                {
+                    finished = true;
+                }
+            }
+        }
         
         Product product = new Product(nextID, name);
         manager.addProduct(product);
@@ -86,7 +118,7 @@ public class StockApp
     }
     
    public void removeProduct()
-    {
+   {
         System.out.println("Remove an old Product");
         System.out.println();
         
@@ -95,9 +127,64 @@ public class StockApp
         
         int id = Integer.parseInt(number);
         
-        manager.RemoveProduct(id);
+        
     }
     
+   public void sellProduct()
+    {
+        System.out.println("Sell a Product");
+        System.out.println();
+        
+        System.out.println("What product do you want to buy?");
+        String number = input.getInput();
+        
+        int id = Integer.parseInt(number);
+   }
+    
+   public void searchProduct()
+    {
+        System.out.println("Search for a Product");
+        System.out.println();
+        
+        System.out.println("What product do you want to find?");
+        String number = input.getInput();
+        
+        String name = Integer.parseInt(number);
+   }
+   
+   public void deliverProduct()
+    {
+        System.out.println("Delivers a Product");
+        System.out.println();
+        
+        System.out.println("What product do you want to deliver?");
+        String number = input.getInput();
+        
+        int id = Integer.parseInt(number);
+   }
+   
+   public void lowStock()
+    {
+        System.out.println("Find products low on stock");
+        System.out.println();
+        
+        System.out.println("These products are low on stock");
+        String number = input.getInput();
+        
+        int id = Integer.parseInt(number);
+   }
+    
+   public void restock()
+    {
+        System.out.println("Restock products low on stock");
+        System.out.println();
+        
+        System.out.println("These products stock have been refilled");
+        String number = input.getInput();
+        
+        int id = Integer.parseInt(number);
+   }
+   
    /**
      * Print out a menu of operation choices
      */
@@ -106,6 +193,11 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Deliver:    Deliver a quantity of a product");
+        System.out.println("    Sell:       Sells a product");
+        System.out.println("    Search:     Search for a producut");
+        System.out.println("    LowStock:   Prints all products low on stock");
+        System.out.println("    Restock:    Restock all lowstock products");
         System.out.println("    PrintAll:   Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
