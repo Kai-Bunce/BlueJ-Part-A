@@ -31,7 +31,7 @@ public class StockManager
     /**
      * Increases the quantity by delivering a product
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
         if(product != null)
@@ -85,6 +85,7 @@ public class StockManager
                 return product;
             }    
         }
+        System.out.println( " Product not found");
         return null;
     }
     
@@ -179,6 +180,19 @@ public class StockManager
         }
     }
       
+    /**
+     * A product can be deleted by ID
+     */
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            this.stock.remove(product);
+            System.out.print("The product is no longer sold " + product);
+        }
+    }    
     /**
      * Print details of all the products.
      */

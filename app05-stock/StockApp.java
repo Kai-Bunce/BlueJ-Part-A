@@ -80,7 +80,7 @@ public class StockApp
             if (choice.equals("lowstock"))
             lowStock();
         }
-        if(choice.equals("printAll"))
+        if(choice.equals("printall"))
         {
             printAllProducts();
         }
@@ -126,7 +126,7 @@ public class StockApp
         String number = input.getInput();
         
         int id = Integer.parseInt(number);
-        
+        manager.removeProduct(id);
         
     }
     
@@ -149,7 +149,7 @@ public class StockApp
         System.out.println("What product do you want to find?");
         String number = input.getInput();
         
-        String name = Integer.parseInt(number);
+     
    }
    
    public void deliverProduct()

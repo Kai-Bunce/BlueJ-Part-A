@@ -35,6 +35,10 @@ public class StockDemo
     {
         this.manager = manager;
         randomGenerator = new Random();
+        
+        manager.addProduct(P1);
+        manager.addProduct(P2);
+        manager.addProduct(P3);
     }
    
     /**
@@ -100,13 +104,13 @@ public class StockDemo
       manager.addProduct(P6);  
       manager.addProduct(P7);  
       manager.printAllProducts();  // should show 7 products
-      manager.delivery(P1.getID(),4);
-      manager.delivery(P2.getID(),2);
-      manager.delivery(P3.getID(),1);
-      manager.delivery(P4.getID(),1);
-      manager.delivery(P5.getID(),2);
-      manager.delivery(P6.getID(),5);
-      manager.delivery(P7.getID(),3);
+      manager.deliverProduct(P1.getID(),4);
+      manager.deliverProduct(P2.getID(),2);
+      manager.deliverProduct(P3.getID(),1);
+      manager.deliverProduct(P4.getID(),1);
+      manager.deliverProduct(P5.getID(),2);
+      manager.deliverProduct(P6.getID(),5);
+      manager.deliverProduct(P7.getID(),3);
       manager.getLowStock();
     }
     
@@ -133,7 +137,7 @@ public class StockDemo
       System.out.println("*** TESTING DELIVERING A PRODUCTS ***");
       System.out.println("Products BEFORE");
       manager.printAllProducts();  // should show 1 product
-      manager.delivery(P1.getID(),4);
+      manager.deliverProduct(P1.getID(),4);
       System.out.println(P1.toString());  
     }
     
