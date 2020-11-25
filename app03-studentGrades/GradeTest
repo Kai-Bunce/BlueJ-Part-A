@@ -1,0 +1,3 @@
+course1.calculateGrade(45)
+the grade isF
+    returned char 'F'

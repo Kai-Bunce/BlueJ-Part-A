@@ -44,6 +44,11 @@ public class Module
          return mark;   
     }
     
+    public void setMark(int mark)
+    {
+        this.mark=mark;
+    }
+    
       public char calculateGrade()
     {
 	   
