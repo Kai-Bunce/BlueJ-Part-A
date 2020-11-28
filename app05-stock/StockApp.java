@@ -141,6 +141,8 @@ public class StockApp
         System.out.println("How many do you want to buy");
         
         int id = Integer.parseInt(number);
+        manager.sellProduct(id,quantity);
+        
    }
     
    public void GetMatchingName()
@@ -151,8 +153,8 @@ public class StockApp
         System.out.println("What product do you want to find?");
         String number = input.getInput();
         
+        int id = Integer.parseInt(number);
        
-     
    }
    
    public void deliverProduct()
@@ -219,7 +221,7 @@ public class StockApp
     private void printHeading()
     {
         System.out.println("******************************");
-        System.out.println(" Stock Management Application ");
+        System.out.println(" Kai's Phones ");
         System.out.println("    App05: by Kai Bunce");
         System.out.println("******************************");
     }

@@ -10,7 +10,6 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
-    private String newProductName;
 
     /**
      * Initialise the stock manager.
