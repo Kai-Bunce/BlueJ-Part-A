@@ -39,6 +39,13 @@ public class StockDemo
         manager.addProduct(P1);
         manager.addProduct(P2);
         manager.addProduct(P3);
+        manager.addProduct(P4);
+        manager.addProduct(P5);
+        manager.addProduct(P6);
+        manager.addProduct(P7);
+        manager.addProduct(P8);
+        manager.addProduct(P9);
+        manager.addProduct(P10);
     }
    
     /**

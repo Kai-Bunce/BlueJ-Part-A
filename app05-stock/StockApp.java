@@ -70,7 +70,7 @@ public class StockApp
         }    
         {
          if (choice.equals("search"))
-            searchProduct();
+            GetMatchingName();
         }
         {
             if (choice.equals("restock"))
@@ -138,10 +138,12 @@ public class StockApp
         System.out.println("What product do you want to buy?");
         String number = input.getInput();
         
+        System.out.println("How many do you want to buy");
+        
         int id = Integer.parseInt(number);
    }
     
-   public void searchProduct()
+   public void GetMatchingName()
     {
         System.out.println("Search for a Product");
         System.out.println();
@@ -149,6 +151,7 @@ public class StockApp
         System.out.println("What product do you want to find?");
         String number = input.getInput();
         
+       
      
    }
    
@@ -161,6 +164,8 @@ public class StockApp
         String number = input.getInput();
         
         int id = Integer.parseInt(number);
+        
+       
    }
    
    public void lowStock()
@@ -195,7 +200,7 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Deliver:    Deliver a quantity of a product");
         System.out.println("    Sell:       Sells a product");
-        System.out.println("    Search:     Search for a producut");
+        System.out.println("    GetMatchingName:     Search for a producut");
         System.out.println("    LowStock:   Prints all products low on stock");
         System.out.println("    Restock:    Restock all lowstock products");
         System.out.println("    PrintAll:   Print all products");
