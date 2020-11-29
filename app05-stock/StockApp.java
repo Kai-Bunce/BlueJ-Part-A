@@ -70,7 +70,7 @@ public class StockApp
         }    
         {
          if (choice.equals("search"))
-            GetMatchingName();
+            getMatchingName();
         }
         {
             if (choice.equals("restock"))
@@ -114,6 +114,7 @@ public class StockApp
         manager.addProduct(product);
         
         System.out.println("\nAdded " + product + " to the stock\n");
+        printAllProducts();
         nextID++;
     }
     
@@ -128,6 +129,7 @@ public class StockApp
         int id = Integer.parseInt(number);
         manager.removeProduct(id);
         
+        printAllProducts();
     }
     
    public void sellProduct()
@@ -135,17 +137,20 @@ public class StockApp
         System.out.println("Sell a Product");
         System.out.println();
         
-        System.out.println("What product do you want to buy?");
-        String number = input.getInput();
+        System.out.println("What product do you want to buy(please enter the product ID)?");
+        String idStr = input.getInput();
+        int id = Integer.parseInt(idStr);
         
         System.out.println("How many do you want to buy");
+        String quantityStr = input.getInput();
+        int quantity = Integer.parseInt(quantityStr);
         
-        int id = Integer.parseInt(number);
-       
+        manager.sellProduct(id,quantity);
         
+        System.out.println("Products sold");
    }
     
-   public void GetMatchingName()
+   public void getMatchingName()
     {
         System.out.println("Search for a Product");
         System.out.println();
@@ -153,7 +158,6 @@ public class StockApp
         System.out.println("Please give a product name");
         String number = input.getInput();
         
-        int id = Integer.parseInt(number);
        
    }
    
