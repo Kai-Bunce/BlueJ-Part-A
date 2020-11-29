@@ -1,4 +1,4 @@
-
+import java.util.Scanner;  // Import the Scanner class
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
@@ -141,7 +141,7 @@ public class StockApp
         System.out.println("How many do you want to buy");
         
         int id = Integer.parseInt(number);
-        manager.sellProduct(id,quantity);
+       
         
    }
     
@@ -150,7 +150,7 @@ public class StockApp
         System.out.println("Search for a Product");
         System.out.println();
         
-        System.out.println("What product do you want to find?");
+        System.out.println("Please give a product name");
         String number = input.getInput();
         
         int id = Integer.parseInt(number);
@@ -158,12 +158,13 @@ public class StockApp
    }
    
    public void deliverProduct()
-    {
+    {   
         System.out.println("Delivers a Product");
         System.out.println();
         
         System.out.println("What product do you want to deliver?");
         String number = input.getInput();
+        System.out.println("How many are being delivered?");
         
         int id = Integer.parseInt(number);
         
