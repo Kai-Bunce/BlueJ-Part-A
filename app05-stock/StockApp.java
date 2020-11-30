@@ -74,13 +74,13 @@ public class StockApp
         }
         {
             if (choice.equals("restock"))
-            restock();
+            restockproduct();
         }   
         {
             if (choice.equals("lowstock"))
-            lowStock();
+            getLowStock();
         }
-         {
+        {
          if (choice.equals("deliver"))
             deliverProduct();
         }
@@ -145,7 +145,7 @@ public class StockApp
         String idStr = input.getInput();
         int id = Integer.parseInt(idStr);
         
-        System.out.println("How many do you want to buy");
+        System.out.println("How many ");
         String quantityStr = input.getInput();
         int quantity = Integer.parseInt(quantityStr);
         
@@ -160,12 +160,7 @@ public class StockApp
         System.out.println();
         
         System.out.println("Please give a product name");
-        String idStr = input.getInput();
-        int id = Integer.parseInt(idStr);
-        String quantityStr = input.getInput();
-        int quantity = Integer.parseInt(quantityStr);
-        String productStr = input.getInput();
-
+        String number = input.getInput();
        
    }
    
@@ -188,30 +183,25 @@ public class StockApp
        
    }
    
-   public void lowStock()
+   public void getLowStock()
     {
-        System.out.println("Find products low on stock");
+        System.out.println("These products are low on stock");
         System.out.println();
         
-        String idStr = input.getInput();
-        int id = Integer.parseInt(idStr);
-
-        System.out.println("These products are low on stock");        
-        String quantityStr = input.getInput();
-        int quantity = Integer.parseInt(quantityStr);
-          
+        manager.getLowStock();
+        
+        nextID++;
         
    }
     
-   public void restock()
+   public void restockproduct()
     {
-        System.out.println("Restock products low on stock");
+        System.out.println("These products stock have been refilled");
         System.out.println();
         
-        System.out.println("These products stock have been refilled");
-        String number = input.getInput();
+        manager.restockproduct();
         
-        int id = Integer.parseInt(number);
+        nextID++;
    }
    
    /**

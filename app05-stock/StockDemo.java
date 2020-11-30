@@ -157,7 +157,7 @@ public class StockDemo
       System.out.println(P1.toString());  
     }
     
-     private void demoAddProductWhenTheresAlreadyOne()  
+    private void demoAddProductWhenTheresAlreadyOne()  
     {
       System.out.println("*** TESTING ADDING PRODUCTS ***");
       System.out.println("Products BEFORE");
@@ -169,7 +169,7 @@ public class StockDemo
       System.out.println("Product is already added");
     }
     
-        private void demoSellProductsWhensStocksTooLow()  
+     private void demoSellProductsWhensStocksTooLow()  
     {
       System.out.println("*** TESTING SELLING PRODUCTS ***");
       System.out.println("Products BEFORE");
@@ -178,7 +178,7 @@ public class StockDemo
       System.out.println(P1.toString());  
     }
     
-        private void demoRemoveProductWhichDoesNotExist()  
+    private void demoRemoveProductWhichDoesNotExist()  
     {
       System.out.println("*** TESTING REMOVING PRODUCTS ***");
       System.out.println("Products BEFORE");

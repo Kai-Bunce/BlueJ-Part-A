@@ -44,7 +44,7 @@ public class StockManager
         }
     }
     
-     /**
+    /**
      * Sells a product
      */
     public void sellProduct(int id, int quantity)
@@ -192,6 +192,19 @@ public class StockManager
             System.out.print("The product is no longer sold " + product);
         }
     }    
+    
+    public void restockproduct()
+    {
+        ArrayList<Product> result = new ArrayList<Product>();
+        for (Product product : stock)
+        {
+            if(product.getQuantity() <= 2  )
+            {
+              stock.get(product.getID());
+            }
+        }
+    }
+    
     /**
      * Print details of all the products.
      */
