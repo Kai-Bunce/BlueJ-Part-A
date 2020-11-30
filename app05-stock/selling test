@@ -1,0 +1,91 @@
+Program.main();
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> deliver
+Delivers a Product
+
+What product do you want to deliver(Please enter the ID))?
+> 101
+How many are being delivered?
+> 10
+Product Delivered : 101: Samsung Galaxy S20 stock level: 10
+Items delivered
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> sell
+Sell a Product
+
+What product do you want to buy(please enter the product ID)?
+> 101
+How many 
+> 2
+ There is not enough stock to sell 
+Products sold
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> sell
+Sell a Product
+
+What product do you want to buy(please enter the product ID)?
+> 102
+How many 
+> 2
+102: Apple iPhone 12 stock level: 0
+Do not have enough items to sell,current quantity 0 trying to buy: 0
+102: Apple iPhone 12 stock level: 0
+Products sold
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> 

@@ -1,0 +1,42 @@
+Program.main();
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> deliver
+Delivers a Product
+
+What product do you want to deliver(Please enter the ID))?
+> 101
+How many are being delivered?
+> -4
+Attempt to restock Samsung Galaxy S20 with a non-positive amount: -4
+Product Delivered : 101: Samsung Galaxy S20 stock level: 0
+Items delivered
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> 
