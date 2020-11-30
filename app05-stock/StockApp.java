@@ -9,7 +9,7 @@ import java.util.Scanner;  // Import the Scanner class
  */
 public class StockApp
 {
-    public final int FIRST_ID = 200;
+    public final int FIRST_ID = 111;
     // Use to get user input
     private InputReader input;
     
@@ -79,6 +79,10 @@ public class StockApp
         {
             if (choice.equals("lowstock"))
             lowStock();
+        }
+         {
+         if (choice.equals("deliver"))
+            deliverProduct();
         }
         if(choice.equals("printall"))
         {
@@ -166,12 +170,17 @@ public class StockApp
         System.out.println("Delivers a Product");
         System.out.println();
         
-        System.out.println("What product do you want to deliver?");
-        String number = input.getInput();
+        System.out.println("What product do you want to deliver(Please enter the ID))?");
+        String idStr = input.getInput();
+        int id = Integer.parseInt(idStr);
+
         System.out.println("How many are being delivered?");
+        String quantityStr = input.getInput();
+        int quantity = Integer.parseInt(quantityStr);
         
-        int id = Integer.parseInt(number);
+        manager.deliverProduct(id,quantity);
         
+        System.out.println("Items delivered");
        
    }
    
