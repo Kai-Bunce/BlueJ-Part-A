@@ -157,7 +157,7 @@ public class StockDemo
       System.out.println(P1.toString());  
     }
     
-         private void demoAddProductWhenTheresAlreadyOne()  
+     private void demoAddProductWhenTheresAlreadyOne()  
     {
       System.out.println("*** TESTING ADDING PRODUCTS ***");
       System.out.println("Products BEFORE");

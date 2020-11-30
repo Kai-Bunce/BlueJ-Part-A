@@ -1,0 +1,55 @@
+Program.main();
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> add
+Add a new Product
+
+Please enter the name of the product 
+> Samsung Galaxy S10"
+
+Added 111: Samsung Galaxy S10" stock level: 0 to the stock
+
+
+Kai's Phones
+=============
+
+101: Samsung Galaxy S20 stock level: 0
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: Google Pixel 5 stock level: 0
+105: Apple iPhone 11 stock level: 0
+106: Apple iPhone 10 stock level: 0
+107: Moto G9 Play stock level: 0
+108: Moto G9 Plus stock level: 0
+109: HUAWEI Mate 40 Pro stock level: 0
+110: HUAWEI Mate Xs stock level: 0
+111: Samsung Galaxy S10" stock level: 0
+******************************
+ Kai's Phones 
+    App05: by Kai Bunce
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver a quantity of a product
+    Sell:       Sells a product
+    GetMatchingName:     Search for a producut
+    LowStock:   Prints all products low on stock
+    Restock:    Restock all lowstock products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> 

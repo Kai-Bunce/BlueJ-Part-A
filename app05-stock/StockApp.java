@@ -160,8 +160,12 @@ public class StockApp
         System.out.println();
         
         System.out.println("Please give a product name");
-        String number = input.getInput();
-        
+        String idStr = input.getInput();
+        int id = Integer.parseInt(idStr);
+        String quantityStr = input.getInput();
+        int quantity = Integer.parseInt(quantityStr);
+        String productStr = input.getInput();
+
        
    }
    
@@ -189,10 +193,14 @@ public class StockApp
         System.out.println("Find products low on stock");
         System.out.println();
         
-        System.out.println("These products are low on stock");
-        String number = input.getInput();
+        String idStr = input.getInput();
+        int id = Integer.parseInt(idStr);
+
+        System.out.println("These products are low on stock");        
+        String quantityStr = input.getInput();
+        int quantity = Integer.parseInt(quantityStr);
+          
         
-        int id = Integer.parseInt(number);
    }
     
    public void restock()
